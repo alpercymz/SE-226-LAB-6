@@ -1,0 +1,25 @@
+//Q3
+
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+double result = 0;
+
+void calc(int a) {
+    if (a == 0) {
+        return;
+    }
+    calc(a-1);
+    result += pow(-1, a+1) / a;
+}
+
+int main() {
+    int n;
+    cout << "Enter n: ";
+    cin >> n;
+    calc(n);
+    cout <<"Result: " << result << endl;
+    return 0;
+}
